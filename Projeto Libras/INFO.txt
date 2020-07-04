@@ -1,0 +1,2 @@
+Ferramenta de desenvolvimento: Delphi 2010
+Linguagens: Pascal

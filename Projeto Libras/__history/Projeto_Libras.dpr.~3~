@@ -1,0 +1,20 @@
+program Projeto_Libras;
+
+uses
+  Forms,
+  unt_CacaPalavras in 'unt_CacaPalavras.pas' {frm_CacaPalavras},
+  unt_TelaVitoria in 'unt_TelaVitoria.pas' {frm_TelaVitoria},
+  unt_Menu in 'unt_Menu.pas' {frm_Menu},
+  unt_Dicas_CacaPalavras in 'unt_Dicas_CacaPalavras.pas' {frm_Dica_CacaPalavras};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tfrm_Menu, frm_Menu);
+  Application.CreateForm(Tfrm_CacaPalavras, frm_CacaPalavras);
+  Application.CreateForm(Tfrm_TelaVitoria, frm_TelaVitoria);
+  Application.CreateForm(Tfrm_Dica_CacaPalavras, frm_Dica_CacaPalavras);
+  Application.Run;
+end.

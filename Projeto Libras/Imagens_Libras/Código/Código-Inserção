@@ -1,0 +1,203 @@
+if image1.Height = 105 then
+      begin
+        image1.height := 95;
+        image1.Width := 95;
+        image1.left := image1.left + 5;
+        image1.top := image1.top + 5;
+
+        str := str + 'C';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image1.height := 105;
+          image1.Width := 105;
+          image1.left := image1.left - 5;
+          image1.top := image1.top - 5;
+        end;
+
+
+
+  if image2.Height = 105 then
+      begin
+        image2.height := 95;
+        image2.Width := 95;
+        image2.left := image2.left + 5;
+        image2.top := image2.top + 5;
+
+        str := str + 'J';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image2.height := 105;
+          image2.Width := 105;
+          image2.left := image2.left - 5;
+          image2.top := image2.top - 5;
+        end;
+
+
+
+
+  if image3.Height = 105 then
+      begin
+        image3.height := 95;
+        image3.Width := 95;
+        image3.left := image3.left + 5;
+        image3.top := image3.top + 5;
+
+        str := str + 'P';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image3.height := 105;
+          image3.Width := 105;
+          image3.left := image3.left - 5;
+          image3.top := image3.top - 5;
+        end;
+
+
+
+      if image4.Height = 105 then
+      begin
+        image4.height := 95;
+        image4.Width := 95;
+        image4.left := image4.left + 5;
+        image4.top := image4.top + 5;
+
+        str := str + 'I';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image4.height := 105;
+          image4.Width := 105;
+          image4.left := image4.left - 5;
+          image4.top := image4.top - 5;
+        end;
+
+
+        if image5.Height = 105 then
+      begin
+        image5.height := 95;
+        image5.Width := 95;
+        image5.left := image5.left + 5;
+        image5.top := image5.top + 5;
+
+        str := str + 'P';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image5.height := 105;
+          image5.Width := 105;
+          image5.left := image5.left - 5;
+          image5.top := image5.top - 5;
+        end;
+
+
+
+    if image6.Height = 105 then
+      begin
+        image6.height := 95;
+        image6.Width := 95;
+        image6.left := image6.left + 5;
+        image6.top := image6.top + 5;
+
+        str := str + 'A';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image6.height := 105;
+          image6.Width := 105;
+          image6.left := image6.left - 5;
+          image6.top := image6.top - 5;
+        end;
+
+
+  if image7.Height = 105 then
+      begin
+        image7.height := 95;
+        image7.Width := 95;
+        image7.left := image7.left + 5;
+        image7.top := image7.top + 5;
+
+        str := str + 'A';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image7.height := 105;
+          image7.Width := 105;
+          image7.left := image7.left - 5;
+          image7.top := image7.top - 5;
+        end;
+
+    if image8.Height = 105 then
+      begin
+        image8.height := 95;
+        image8.Width := 95;
+        image8.left := image8.left + 5;
+        image8.top := image8.top + 5;
+
+        str := str + 'B';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image8.height := 105;
+          image8.Width := 105;
+          image8.left := image8.left - 5;
+          image8.top := image8.top - 5;
+        end;
+
+
+    if image9.Height = 105 then
+      begin
+        image9.height := 95;
+        image9.Width := 95;
+        image9.left := image9.left + 5;
+        image9.top := image9.top + 5;
+
+        str := str + 'Q';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image9.height := 105;
+          image9.Width := 105;
+          image9.left := image9.left - 5;
+          image9.top := image9.top - 5;
+        end;
+
+
+if image10.Height = 105 then
+      begin
+        image10.height := 95;
+        image10.Width := 95;
+        image10.left := image10.left + 5;
+        image10.top := image10.top + 5;
+
+        str := str + 'D';
+        btVerificar.Click;
+
+      end
+      else
+        begin
+           image10.height := 105;
+          image10.Width := 105;
+          image10.left := image10.left - 5;
+          image10.top := image10.top - 5;
+        end;
+

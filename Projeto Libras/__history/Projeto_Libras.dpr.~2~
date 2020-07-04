@@ -1,0 +1,16 @@
+program Projeto_Libras;
+
+uses
+  Forms,
+  unt_CacaPalavras in 'unt_CacaPalavras.pas' {frm_CacaPalavras},
+  unt_TelaVitoria in 'unt_TelaVitoria.pas' {frm_TelaVitoria};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tfrm_CacaPalavras, frm_CacaPalavras);
+  Application.CreateForm(Tfrm_TelaVitoria, frm_TelaVitoria);
+  Application.Run;
+end.

@@ -1,0 +1,96 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Como Jogar'
+  ClientHeight = 749
+  ClientWidth = 1370
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -19
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 23
+  object Label1: TLabel
+    Left = 0
+    Top = 64
+    Width = 175
+    Height = 53
+    Caption = 'Objetivo:'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -47
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 72
+    Top = 127
+    Width = 1033
+    Height = 53
+    Caption = '* Encontre todas as 9 palavras que est'#227'o embaralhadas'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -47
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 0
+    Top = 276
+    Width = 236
+    Height = 53
+    Caption = 'Como jogar:'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -47
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 72
+    Top = 332
+    Width = 1224
+    Height = 53
+    Caption = 
+      '* Clique sobre sobre as letras na sequ'#234'ncia para formar a palavr' +
+      'a'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -47
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 72
+    Top = 395
+    Width = 1158
+    Height = 53
+    Caption = '* Para desmarcar uma sele'#231#227'o, clique novamente em alguma '
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -47
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 104
+    Top = 443
+    Width = 398
+    Height = 53
+    Caption = 'figura j'#225' selecionada.'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -47
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+end

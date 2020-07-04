@@ -1,0 +1,244 @@
+unit TelaPrincipal;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Buttons, StdCtrls, ExtCtrls, Menus;
+
+type
+  TFormTelaPrincipal = class(TForm)
+    LabelPontos: TLabel;
+    btnReinicia: TButton;
+    AreaDoJogo: TPanel;
+    btnCartaSaillorMoon1: TSpeedButton;
+    btnCartaPokemon1: TSpeedButton;
+    btnCartaSakura1: TSpeedButton;
+    btnCartaYukito1: TSpeedButton;
+    btnCartaGohan1: TSpeedButton;
+    btnCartaDragonBall1: TSpeedButton;
+    btnCartaPokemon2: TSpeedButton;
+    btnCartaDragonBall2: TSpeedButton;
+    btnCartaSakura2: TSpeedButton;
+    btnCartaYukito2: TSpeedButton;
+    btnCartaGohan2: TSpeedButton;
+    btnCartaSerena1: TSpeedButton;
+    btnCartaSerena2: TSpeedButton;
+    btnCartaGoku1: TSpeedButton;
+    btnCartaGoku2: TSpeedButton;
+    btnCartaLiga1: TSpeedButton;
+    btnCartaLiga2: TSpeedButton;
+    btnCartaLince1: TSpeedButton;
+    btnCartaLince2: TSpeedButton;
+    btnCarta1Gohan: TSpeedButton;
+    btnCarta2Gohan: TSpeedButton;
+    btnCartaVampira1: TSpeedButton;
+    btnCartaVampira2: TSpeedButton;
+        Cronometro: TTimer;
+    chkEmbaralha: TCheckBox;
+    btnCartaSaillorMoon2: TSpeedButton;
+    procedure ClickBotao(Sender: TObject);
+    procedure CronometroTimer(Sender: TObject);
+    procedure btnReiniciaClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btnCartaSerena1Click(Sender: TObject);
+  private
+    B1,B2: TSpeedButton;  // O par de botões de cada jogada...
+    Pontos, Acertos: integer;
+    procedure PerdePontos(N: integer);
+    procedure GanhaPontos(N: integer);
+    procedure FimDeJogo(mensagem: string);
+  public
+    procedure ReiniciaJogo;
+    procedure LimpaBotao(Botao: TSpeedButton);
+    procedure Embaralha;
+  end;
+
+var
+  FormTelaPrincipal: TFormTelaPrincipal;
+
+implementation
+
+{$R *.DFM}
+
+procedure TFormTelaPrincipal.ReiniciaJogo;
+begin
+  B2 := nil;
+  {o "nil" acima significa que B2 estará VAZIA
+  e não apontará para NENHUM botão!}
+  Pontos  := 60;  // inicia com 60 pontos
+  Acertos := 0;
+  {Limpa todos os botões:}
+  LimpaBotao(btnCartaPokemon1);
+  LimpaBotao(btnCartaPokemon2);
+  LimpaBotao(btnCartaSaillorMoon1);
+  LimpaBotao(btnCartaSaillorMoon2);
+  LimpaBotao(btnCartaSakura1);
+  LimpaBotao(btnCartaSakura2);
+  LimpaBotao(btnCartaYukito1);
+  LimpaBotao(btnCartaYukito2);
+  LimpaBotao(btnCartaDragonBall1);
+  LimpaBotao(btnCartaDragonBall2);
+  LimpaBotao(btnCartaGohan1);
+  LimpaBotao(btnCartaGohan2);
+  LimpaBotao(btnCartaSerena1);
+  LimpaBotao(btnCartaSerena2);
+  LimpaBotao(btnCartaGoku1);
+  LimpaBotao(btnCartagoku2);
+  LimpaBotao(btnCartaLiga1);
+  LimpaBotao(btnCartaLiga2);
+  LimpaBotao(btnCartaLince1);
+  LimpaBotao(btnCartaLince2);
+  LimpaBotao(btnCarta1Gohan);
+  LimpaBotao(btnCarta2Gohan);
+  LimpaBotao(btnCartaVampira1);
+  LimpaBotao(btnCartaVampira2);
+  {Verifica op. de embaralhar:}
+  if chkEmbaralha.Checked then
+    Embaralha;
+  {Habilita a tela p/ jogar:}
+  AreaDoJogo.Enabled := True;
+  Cronometro.Enabled := True;  // liga o cronometro
+end;
+
+procedure TFormTelaPrincipal.CronometroTimer(Sender: TObject);
+begin
+  PerdePontos(1);  // perde um ponto por segundo
+end;
+
+procedure TFormTelaPrincipal.ClickBotao(Sender: TObject);
+begin
+  if B2 = nil then // vazio (ver ReiniciaJogo)
+    B2 := B1;  // o botão anterior
+  B1 := TSpeedButton(Sender);  // O botão clicado
+  B1.Spacing := 4;   // Retira os espaços p/ mostrar a figura
+  if (B2 = nil) or (B1 = B2)  then
+    Exit  // sai desta procedure
+  else if B2.Tag = B1.Tag then begin
+    {A propriedade Tag é um número que vc pode usar
+    à vontade - aqui usamos para identificar os pares
+    de botões.}
+    B1 := nil;
+    B2 := nil;
+    GanhaPontos(5);
+  end
+  else begin  // ERROU!
+    LimpaBotao(B2);
+    B2 := nil;
+    PerdePontos(2);
+  end;
+end;
+
+procedure TFormTelaPrincipal.PerdePontos(N: integer);
+begin
+  Pontos := Pontos - N;
+  LabelPontos.Caption := 'Tempo Restante: '+IntToStr(Pontos);
+  if Pontos <= 0 then
+    FimDeJogo('Você perdeu...Tente outra VEZ');
+end;
+
+procedure TFormTelaPrincipal.GanhaPontos(N: integer);
+begin
+  Pontos  := Pontos  + N;
+  Acertos := Acertos + 1;
+  LabelPontos.Caption := 'Tempo Restante: '+IntToStr(Pontos);
+  if Acertos = 12 then
+    FimDeJogo('Parabéns! você acertou !!! ');
+end;
+
+procedure TFormTelaPrincipal.FimDeJogo(mensagem: string);
+begin
+  Cronometro.Enabled := False;  // desliga o cronometro
+  ShowMessage('Fim de Jogo: '+mensagem);
+  AreaDoJogo.Enabled := False;  // impede de mexer no jogo
+end;
+
+procedure TFormTelaPrincipal.btnReiniciaClick(Sender: TObject);
+begin
+  ReiniciaJogo;
+end;
+
+procedure TFormTelaPrincipal.LimpaBotao(Botao: TSpeedButton);
+begin
+  Botao.Spacing := 200;  // cobre a figura com espaços
+  Botao.Down := False;
+end;
+
+procedure TFormTelaPrincipal.FormCreate(Sender: TObject);
+begin
+  ReiniciaJogo;
+end;
+
+procedure TFormTelaPrincipal.Embaralha;
+var
+  aBotao: array[1..12,1..2] of TSpeedButton;
+  i,j, p, id: integer;
+  imagem: TBitmap;
+  nome: string;
+begin
+  {Coloca os botões no array:}
+  aBotao[1][1] := btnCartaPokemon1;
+  aBotao[1][2] := btnCartaPokemon2;
+  aBotao[2][1] := btnCartaSaillorMoon1;
+  aBotao[2][2] := btnCartaSaillorMoon2;
+  aBotao[3][1] := btnCartaSakura1;
+  aBotao[3][2] := btnCartaSakura2;
+  aBotao[4][1] := btnCartaYukito1;
+  aBotao[4][2] := btnCartaYukito2;
+  aBotao[5][1] := btnCartaDragonBall1;
+  aBotao[5][2] := btnCartaDragonBall2;
+  aBotao[6][1] := btnCartaGohan1;
+  aBotao[6][2] := btnCartaGohan2;
+  aBotao[7][1] := btnCartaSerena1;
+  aBotao[7][2] := btnCartaSerena2;
+  aBotao[8][1] := btnCartaGoku1;
+  aBotao[8][2] := btnCartaGoku2;
+  aBotao[9][1] := btnCartaLiga1;
+  aBotao[9][2] := btnCartaLiga2;
+  aBotao[10][1] := btnCartaLince1;
+  aBotao[10][2] := btnCartaLince2;
+  aBotao[11][1] := btnCarta1Gohan;
+  aBotao[11][2] := btnCarta2Gohan;
+  aBotao[12][1] := btnCartaVampira1;
+  aBotao[12][2] := btnCartaVampira2;
+
+
+  {Troca as imagens entre os botões, aleatóriamente:}
+  Randomize;
+  imagem := TBitmap.Create;
+  for i := 1 to 12 do
+    for j := 1 to 2 do begin
+      p := Random(11)+1;  // gera um número entre 1..6
+      {Guarda as informações do botão escolhido...}
+      id   := aBotao[i][j].Tag;
+      imagem.Assign(aBotao[i][j].Glyph);
+      nome := aBotao[i][j].Caption;
+      {...e troca com o botão atual:}
+      aBotao[i][j].Glyph.Assign(aBotao[p][j].Glyph);
+      aBotao[p][j].Glyph.Assign(imagem);
+      aBotao[i][j].Tag := aBotao[p][j].Tag;
+      aBotao[p][j].Tag := id;
+      aBotao[i][j].Caption := aBotao[p][j].Caption;
+      aBotao[p][j].Caption := nome;
+    end;  // for j
+  imagem.Free;
+end;
+
+procedure TFormTelaPrincipal.btnCartaSerena1Click(Sender: TObject);
+begin
+ if B2 = nil then // vazio (ver ReiniciaJogo)
+    B2 := B1;  // o botão anterior
+  B1 := TSpeedButton(Sender);  // O botão clicado
+  B1.Spacing := 4;   // Retira os espaços p/ mostrar a figura
+  if (B2 = nil) or (B1 = B2)  then
+    Exit  // sai desta procedure
+  else if B2.Tag = B1.Tag then begin
+    {A propriedade Tag é um número que vc pode usar
+    à vontade - aqui usamos para identificar os pares
+    de botões.}
+    B1 := nil;
+    B2 := nil;
+    GanhaPontos(5);
+end;
+  end;
+end.

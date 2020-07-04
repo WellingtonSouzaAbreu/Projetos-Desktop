@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/11/15 15:18:30.856.pas,C:\Users\welli\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_CacaPalavras.pas</Transaction>
+    <Transaction>2019/11/15 15:18:30.856.dfm,C:\Users\welli\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_CacaPalavras.dfm</Transaction>
+    <Transaction>2019/11/15 15:18:48.370.dproj,C:\Users\welli\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\Projeto_Libras.dproj</Transaction>
+    <Transaction>2019/11/18 19:49:37.027.pas,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\Unit1.pas=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_TelaVitoria.pas</Transaction>
+    <Transaction>2019/11/18 19:49:37.027.dfm,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\Unit1.dfm=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_TelaVitoria.dfm</Transaction>
+    <Transaction>2019/11/21 14:19:27.816.pas,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\Unit1.pas=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_Menu.pas</Transaction>
+    <Transaction>2019/11/21 14:19:27.831.dfm,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\Unit1.dfm=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_Menu.dfm</Transaction>
+    <Transaction>2019/11/21 15:09:11.217.pas,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\Unit1.pas=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_Dicas_CacaPalavras.pas</Transaction>
+    <Transaction>2019/11/21 15:09:11.217.dfm,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\Unit1.dfm=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_Dicas_CacaPalavras.dfm</Transaction>
+    <Transaction>2019/11/21 16:37:38.972.pas,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\TelaPrincipal.pas=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_JogoMemoria.pas</Transaction>
+    <Transaction>2019/11/21 16:37:38.972.dfm,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\TelaPrincipal.dfm=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_JogoMemoria.dfm</Transaction>
+    <Transaction>2019/11/21 16:39:17.974.pas,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\Unit1.pas=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_Dica_JogoMemoria.pas</Transaction>
+    <Transaction>2019/11/21 16:39:17.974.dfm,C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\Unit1.dfm=C:\Users\welli\Desktop\Delphi 2010\Projeto Libras\unt_Dica_JogoMemoria.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="unt_CacaPalavras.pas"/>
+    <File Path="unt_CacaPalavras.dfm"/>
+    <File Path="unt_Dicas_CacaPalavras.pas"/>
+    <File Path="unt_Dicas_CacaPalavras.dfm"/>
+    <File Path="unt_Menu.pas"/>
+    <File Path="unt_Menu.dfm"/>
+    <File Path="unt_TelaVitoria.pas"/>
+    <File Path="unt_TelaVitoria.dfm"/>
+    <File Path="unt_JogoMemoria.pas"/>
+    <File Path="unt_JogoMemoria.dfm"/>
+    <File Path="unt_Dica_JogoMemoria.pas"/>
+    <File Path="unt_Dica_JogoMemoria.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

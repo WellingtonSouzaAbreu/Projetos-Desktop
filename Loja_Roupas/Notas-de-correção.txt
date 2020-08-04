@@ -1,0 +1,3 @@
+Erro ao cadastrar primeiro cliente
+
+Quando o produto tem baixa no estoque, interfere no gasto em compras
